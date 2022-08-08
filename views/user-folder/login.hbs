@@ -1,0 +1,17 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/profile" method="POST" autocomplete="off">
+    <div class="mb-3">
+        <label class="form-label">E-mail</label>
+        <input type="email" class="form-control" name="email" placeholder="E-mail" value="{{userinfo.email}}">
+        <div class="text-danger">{{userinfo.emailError}}</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password"
+            value="{{userinfo.password}}">
+        <div class="text-danger">{{userinfo.passwordError}}</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <a href="/register">Go to Register</a>
+</form>

@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/register" method="POST" autocomplete="off">
+    <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="fullname" placeholder="Full name" value="{{userinfo.fullname}}">
+        <div class="text-danger">{{userinfo.fullnameError}}</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">E-mail</label>
+        <input type="email" class="form-control" name="email" placeholder="E-mail" value="{{userinfo.email}}">
+        <div class="text-danger">{{userinfo.emailError}}</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password"
+            value="{{userinfo.password}}">
+        <div class="text-danger">{{userinfo.passwordError}}</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Phone number</label>
+        <input type="tel" class="form-control" name="phoneNum" placeholder="Phone-number" value="{{userinfo.phoneNum}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Date</label>
+        <input type="date" class="form-control" name="dob" placeholder="Date" value="{{userinfo.dob}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+    <a href="/login">Go to login</a>
+</form>

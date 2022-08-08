@@ -1,0 +1,27 @@
+<h3>{{viewTitle}}</h3>
+<form action="/user-list" method="POST" autocomplete="off">
+<div class="row">
+    <input type="hidden" name='search' value="searchField">
+    <div class="col-sm-5">
+        <input type="text" class="form-control" name="fullname" placeholder="Search by name">
+    </div>
+    <div class="col-sm-3">
+        <button type="submit" class="btn btn-secondary">Search</button>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{this.fullname}}</td>
+            <td>{{this.email}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>    
