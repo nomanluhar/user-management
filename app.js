@@ -28,5 +28,6 @@ app.set('view engine', 'hbs');
 
 app.listen(PORT, function () {
     console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Start => http://localhost:${PORT}/register`);
 });
 
